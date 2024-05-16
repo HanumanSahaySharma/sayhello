@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  min-height: 100vh;
+}
+p {
+  @apply mb-6;
+}
+p:last-child {
+  @apply mb-0;
+}
+figure {
+  @apply mb-8;
+}
+html.light .ql-toolbar,
+html.light .ql-container {
+  @apply border-zinc-400;
+}
+html.light .ql-container:focus {
+  @apply border-zinc-500;
+}
+
+html.dark .ql-container {
+  @apply border-zinc-500;
+}
+html.dark .ql-toolbar {
+  @apply border-zinc-500 bg-zinc-900/50 text-zinc-200;
+}
+html.dark .ql-toolbar .ql-picker {
+  @apply text-zinc-300;
+}
+html.dark .ql-toolbar .ql-stroke {
+  @apply stroke-zinc-300;
+}
+html.dark .ql-toolbar button:hover {
+  @apply !text-zinc-100;
+}
+html.dark .ql-editor {
+  @apply !bg-zinc-900/50;
+}
+html.dark .ql-editor.ql-blank::before {
+  @apply !text-zinc-100;
+}
+
+.quill .ql-toolbar {
+  @apply rounded-b-none rounded;
+}
+.quill .ql-container {
+  height: 200px;
+  @apply rounded-t-none rounded;
+}
+.custom-min-h-screen {
+  min-height: calc(100vh - 148px);
+}
+html.light .arrow-left::before {
+  background: linear-gradient(
+    270deg,
+    rgba(243, 244, 246, 0) 0%,
+    rgba(243, 244, 246, 0.75) 25%,
+    rgba(243, 244, 246, 0.9) 50%,
+    rgb(243, 244, 246) 75%
+  );
+}
+html.light .arrow-right::before {
+  background: linear-gradient(
+    90deg,
+    rgba(243, 244, 246, 0) 0%,
+    rgba(243, 244, 246, 0.75) 25%,
+    rgba(243, 244, 246, 0.9) 50%,
+    rgb(243, 244, 246) 75%
+  );
+}
+
+html.dark .arrow-left::before {
+  background: linear-gradient(
+    270deg,
+    rgba(24, 24, 27, 0) 0%,
+    rgba(24, 24, 27, 0.75) 25%,
+    rgba(24, 24, 27, 0.9) 50%,
+    rgb(24, 24, 27) 75%
+  );
+}
+html.dark .arrow-right::before {
+  background: linear-gradient(
+    90deg,
+    rgba(24, 24, 27, 0) 0%,
+    rgba(24, 24, 27, 0.75) 25%,
+    rgba(24, 24, 27, 0.9) 50%,
+    rgb(24, 24, 27) 75%
+  );
+}
+
+.arrow {
+  width: 42px;
+  height: 42px;
+}
+.arrow-left::before,
+.arrow-right::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  z-index: -1;
+}
+.arrow-left::before {
+  left: 18px;
+}
+.arrow-right::before {
+  right: 18px;
+}
+.arrow-left:disabled,
+.arrow-right:disabled {
+  display: none;
+}
