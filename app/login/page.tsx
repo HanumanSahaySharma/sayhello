@@ -1,8 +1,8 @@
-import { Input } from "@/components/ui/input";
-import Container from "@/components/Container";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import Container from "@/components/Container";
 
 const Login = () => {
   return (
