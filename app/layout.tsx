@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${jost.className} pt-[55px] bg-zinc-100 dark:bg-zinc-900`}>
+      <body className={`${jost.className} pt-[55px] bg-[#ededfb] dark:bg-zinc-900`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
           <main className="custom-min-h-screen">{children}</main>

@@ -17,7 +17,7 @@ const Article = () => {
           />
           <span className="font-medium pl-4">Alex Woon</span>
         </div>
-        <div className="text-sm text-zinc-500 dark:text-zinc-400">May 12, 2024</div>
+        <div className="text-zinc-500 dark:text-zinc-400 text-sm">Published on May 12, 2024</div>
       </div>
       <div className="grid grid-cols-12 gap-10 mb-4">
         <div className="col-span-8">
@@ -46,7 +46,7 @@ const Article = () => {
         <div className="flex items-center gap-4">
           <Link
             href="/"
-            className="px-4 py-1.5 text-sm rounded-full dark:text-zinc-400 dark:hover:text-zinc-200 text-zinc-600 bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 hover:text-zinc-800 hover:bg-white transition-all whitespace-nowrap"
+            className="rounded-full text-sm md:text-[15px] px-2 md:px-4 py-1.5 font-normal border border-zinc-200 dark:border-zinc-600 dark:text-zinc-300 dark:hover:text-zinc-100 text-zinc-600 dark:hover:bg-zinc-600 dark:bg-zinc-700 bg-white hover:text-zinc-800 hover:bg-zinc-100 transition-all whitespace-nowrap"
           >
             Technology
           </Link>

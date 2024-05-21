@@ -18,7 +18,7 @@ const Categories = () => {
               <Link
                 href={`/${category.toLowerCase()}`}
                 key={i}
-                className="rounded-full text-sm md:text-[15px] px-2 md:px-4 py-1.5 font-normal border border-zinc-200 dark:border-zinc-600 dark:text-zinc-300 dark:hover:text-zinc-100 text-zinc-600 dark:hover:bg-zinc-600 dark:bg-zinc-700 bg-white hover:text-zinc-800 hover:bg-zinc-100 transition-all whitespace-nowrap"
+                className="rounded-full text-sm md:text-[15px] px-2 md:px-4 py-1.5 font-normal border border-zinc-300 dark:border-zinc-600 dark:text-zinc-300 dark:hover:text-zinc-100 text-zinc-600 dark:hover:bg-zinc-600 dark:bg-zinc-700 bg-white hover:text-zinc-800 hover:bg-zinc-100 transition-all whitespace-nowrap"
               >
                 {category}
               </Link>
