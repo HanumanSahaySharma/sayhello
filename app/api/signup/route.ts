@@ -6,10 +6,10 @@ import User from "@/lib/models/User";
 export const POST = async (req: NextRequest) => {
   try {
     await connectToDB();
-    let { name, email, password } = await req.json();
+    let { firstName, lastName, email, password } = await req.json();
 
     // check the all field are filled out or not
-    if (!name || !email || !password) {
+    if (!firstName || !lastName || !email || !password) {
       return NextResponse.json({ message: "All fields are required.", status: 400 });
     }
     // Check the email is valid or not
@@ -30,7 +30,7 @@ export const POST = async (req: NextRequest) => {
     const hashPassword = bcryptjs.hashSync(password, 10);
     password = hashPassword;
     const newUser = new User({
-      name,
+      name: firstName + " " + lastName,
       email,
       password,
     });
