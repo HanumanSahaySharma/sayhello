@@ -11,6 +11,7 @@ import { Spinner } from "@/components/ui/spinner";
 import Container from "@/components/Container";
 import { useDispatch } from "react-redux";
 import { setUser } from "../redux/user/userSlice";
+import { count } from "console";
 
 const Login = () => {
   const router = useRouter();
@@ -43,6 +44,10 @@ const Login = () => {
       setLoading(false);
     }
   };
+
+  // TODO CODE
+  // END OF TODO CODE
+
   return (
     <Container className="max-w-2xl custom-min-h-screen flex items-center w-full">
       <div className="w-full bg-white dark:bg-zinc-800 rounded p-6 lg:p-10 shadow-xl">

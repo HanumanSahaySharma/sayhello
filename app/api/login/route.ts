@@ -23,14 +23,14 @@ export const POST = async (req: NextRequest) => {
       {
         id: user._id,
       },
-      process.env.NEXT_JWT_SECRET_KEY,
+      process.env.NEXT_JWT_SECRET_KEY as string,
       {
-        expiresIn: "1d",
+        expiresIn: "1m",
       }
     );
     const { password: pass, ...rest } = user._doc;
     const response = NextResponse.json({ user: rest, message: "Login successfully.", status: 200 });
-    response.headers.set("Set-Cookie", `access_token=${token}; HttpOnly;`);
+    response.headers.set("Set-Cookie", `access_token=${token}; HttpOnly; Path=/; Secure; SameSite=Strict`);
     return response;
   } catch (error) {
     console.log("LOGIN_POST", error);
